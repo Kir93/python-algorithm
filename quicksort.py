@@ -1,4 +1,4 @@
-data = [1,3,5,8,7,2,10,9,4,6]
+data = list(map(int, input().split()))
 
 def quickSort(data):
   
