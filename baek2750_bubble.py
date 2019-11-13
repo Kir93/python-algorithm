@@ -5,9 +5,9 @@ for i in range(n):
   data.append(a)
 
 for i in range(n):
-  for j in range(n):
-    if data[i] < data[j]:
-      data[i], data[j] = data[j], data[i]
+  for j in range(1,n-i):
+    if data[j-1] > data[j]:
+      data[j-1], data[j] = data[j], data[j-1]
 
 for i in data:
   print(i)
