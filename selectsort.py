@@ -2,7 +2,7 @@ data = list(map(int,input().split()))
 
 for i in range(len(data)):
   min = 9999
-  for j in range(i,len(data)):
+  for j in range(i+1,len(data)):
     if min > data[j]:
       min = data[j]
       index = j
