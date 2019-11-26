@@ -40,4 +40,4 @@ def dijkstra(start):
 if __name__ == "__main__":
   dijkstra(0)
   for i in range(num):
-    print(d[i], end=" ")
+    print(d[i], end=' ')
