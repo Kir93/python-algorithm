@@ -1,5 +1,5 @@
 import sys
-#sys.stdin = open("input.txt", "rt")
+sys.stdin = open("input.txt", "rt")
 n = int(input())
 data = []
 for i in range(n):
