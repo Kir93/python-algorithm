@@ -10,6 +10,6 @@ while True:
         if len(hip) == 0:
             print(-1)
         else:
-            print(hq.heappop(hip)[1])
+            print(-hq.heappop(hip))
     else:
-        hq.heappush(hip, (-n, n))
+        hq.heappush(hip, -n)
