@@ -1,0 +1,26 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+
+    /*
+    "emmet.showExpandedAbbreviation" :"always",
+    "emmet.showSuggestionsAsSnippets":true,
+    "editor.snippetSuggestions": "top",
+     
+    */
+
+    "window.zoomLevel": -1,
+    "editor.fontSize": 18,
+    "workbench.sideBar.location": "left",
+    "mongo.shell.path": "/Users/abcd/downloads/bin/mongo",
+    "C_Cpp.default.cppStandard": "c++11",
+    "cmake-tools-helper.cmake_download_path": "/Users/abcd/.vscode/extensions/maddouri.cmake-tools-helper-0.2.1/cmake_download",
+    "C_Cpp.updateChannel": "Insiders",
+    "debug.console.fontSize": 21,
+    //"python.pythonPath": "/usr/bin/python",
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.fontSize": 21,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "python.pythonPath": "C:\\Users\\cndfu\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe"
+}
