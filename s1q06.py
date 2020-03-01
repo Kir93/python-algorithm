@@ -40,3 +40,26 @@ for x in a:
         res=x
 print(res)
 '''
+
+#new mycode
+import sys
+#sys.stdin = open("input.txt", "r")
+def digit_sum(x):
+    global cnt
+    strx = str(x)
+    max_x = 0
+    for i in strx:
+        max_x += int(i)
+    cnt.append(max_x)
+n = int(input())
+data = list(map(int, input().split()))
+cnt = []
+m = -99999
+l = 0
+for x in data:
+    digit_sum(x)
+for i in range(len(cnt)):
+    if cnt[i] > m:
+        m = cnt[i]
+        l = i
+print(data[l])
