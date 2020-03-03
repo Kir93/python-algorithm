@@ -45,6 +45,26 @@ for i in range(n):
             money = data[1] * 100
     if bmoney < money:
         bmoney = money
-
-
 print(bmoney)
+
+#new mycode
+import sys
+#sys.stdin = open('input.txt', 'rt')
+n = int(input())
+m = -999999
+for i in range(n):
+    tot = 0
+    data = list(map(int, input().split()))
+    if data[0] == data[1] and data[1] == data[2]:
+        tot = 10000 + (data[0]*1000)
+    elif data[0] == data[1] and data[1] != data[2]:
+        tot = 1000 + (data[0]*100)
+    elif data[1] == data[2] and data[0] != data[2]:
+        tot = 1000 + (data[1]*100)
+    elif data[2] == data[0] and data[1] != data[0]:
+        tot = 1000 + (data[2]*100)
+    else:
+        tot = max(data)*100
+    if tot > m:
+        m = tot
+print(m)
