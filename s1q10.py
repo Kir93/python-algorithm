@@ -29,3 +29,19 @@ for i in range(n):
         cnt=0
 
 print(sum)
+
+#new mycode
+import sys
+#sys.stdin = open('input.txt', 'rt')
+n = int(input())
+data = list(map(int, input().split()))
+score = 0
+chk = 0
+for x in data:
+    if x == 1:
+        score += (1 + chk)
+        chk += 1
+    elif x == 0:
+        chk = 0
+print(score)
+
