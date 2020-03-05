@@ -44,3 +44,16 @@ for i in range(n):
         print("#%d YES" %i)
     else:
         print("#%d NO" %i)
+
+#new mycode
+import sys
+sys.stdin = open('input.txt', 'rt')
+n = int(input())
+for i in range(n):
+    data = input().upper()
+    for x in range(len(data)):
+        if data[x] != data[-x-1]:
+            print("#%d NO" % (i+1))
+            break
+    else:
+        print("#%d YES" % (i+1))
