@@ -48,3 +48,15 @@ if p2<m:
     c=c+b[p2:]
 for x in c:
     print(x, end=' ')
+
+#new mycode
+import sys
+#sys.stdin = open('input.txt', 'rt')
+n = int(input())
+d1 = list(map(int, input().split()))
+m = int(input())
+d2 = list(map(int, input().split()))
+data = d1 + d2
+data.sort()
+for x in data:
+    print(x, end=" ")
