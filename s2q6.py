@@ -47,3 +47,29 @@ if sum1>largest:
 if sum2>largest:
     largest=sum2
 print(largest)
+
+#new mycode
+import sys
+sys.stdin = open("input.txt", "rt")
+n = int(input())
+data = []
+for _ in range(n):
+  data.append(list(map(int, input().split())))
+tot = -999999
+d3 = d4 = 0
+for i in range(n):
+  d1 = d2 = 0
+  for j in range(n):
+    d1 += data[i][j]
+    d2 += data[j][i]
+  if d1 >= d2 and tot < d1:
+    tot = d1
+  elif d1 < d2 and tot < d2:
+    tot = d2
+  d3 += data[i][i]
+  d4 += data[-i-1][-i-1]
+if d3 >= d4 and tot < d3:
+  tot = d3
+elif d3 < d4 and tot < d4:
+  tot = d4
+print(tot)
