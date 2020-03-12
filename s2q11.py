@@ -59,3 +59,28 @@ for i in range(3):
             cnt+=1
         
 print(cnt)
+
+#new mycode
+import sys
+#sys.stdin=open("input.txt","rt")
+n = 7
+data = [list(map(int, input().split())) for _ in range(n)]
+tot = 0
+for i in range(n):
+  d1 = d2 = False
+  for j in range(3):
+    for x in range(5):
+      if data[i][x+j] == data[i][4+j-x]:
+        d1 = True
+      else:
+        d1 = False
+        break
+    for y in range(5):
+      if data[y+j][i] == data[4+j-y][i]:
+        d2 = True
+      else: 
+        d2 = False
+        break
+    if d1 == True:  tot +=1
+    if d2 == True:  tot +=1
+print(tot)    
