@@ -34,3 +34,22 @@ for i in range(n):
 
 for x in seq:
     print(x, end=' ')
+    
+#new mycode
+import sys
+#sys.stdin = open('input.txt', 'rt')
+n = int(input())
+data = list(map(int, input().split()))
+tmp = [0] * n
+
+for i in range(n):
+    for j in range(n):
+        if data[i] == 0:
+            if tmp[j] == 0:
+                tmp[j] = i+1
+                break
+        else:
+            if tmp[j] == 0:
+                data[i] -= 1
+for x in tmp:
+    print(x, end=' ')
