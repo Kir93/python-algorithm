@@ -26,3 +26,35 @@ while lt<=rt:
 
 print(len(res))
 print(res)
+
+#new mycode
+import sys
+#sys.stdin = open('input.txt', 'rt')
+n = int(input())
+data = list(map(int, input().split()))
+res = ''
+r = 0
+lt = 0
+rt = n-1
+while lt <= rt:
+    if data[lt] < r or data[rt] < r:
+        if data[lt] < r and data[rt] < r:
+            break
+        elif data[lt] < r and data[rt] > r:
+            res += 'R'
+            r = data[rt]
+            rt -= 1
+        elif data[rt] < r and data[lt] > r:
+            res += 'L'
+            r = data[lt]
+            lt += 1
+    if data[lt] > r and data[lt] < data[rt]:
+        res += 'L'
+        r = data[lt]
+        lt += 1
+    if data[rt] > r and data[rt] < data[lt]:
+        res += 'R'
+        r = data[rt]
+        rt -= 1
+print(len(res))
+print(res)
