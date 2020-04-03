@@ -41,3 +41,23 @@ while True:
         if cur[0]==m:
             print(cnt)
             break
+
+#new mycode
+import sys
+from collections import deque
+#sys.stdin = open("input.txt", "rt")
+n, m = map(int, input().split())
+data = [(p, v) for p, v in enumerate(list(map(int, input().split())))]
+data = deque(data)
+cnt = 0
+while True:
+  maxx=max(data, key=lambda x:x[1])
+  c = data.popleft()
+  if c[1] < maxx[1]:
+    data.append(c)
+  else:
+    cnt += 1
+    if c[0] == m:
+      print(cnt)
+      break
+    
