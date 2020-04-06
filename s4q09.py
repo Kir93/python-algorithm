@@ -46,3 +46,20 @@ for i in range(52):
         break
 else:
     print("YES")
+
+#new mycode
+import sys
+sys.stdin = open("input.txt", "rt")
+a = input()
+b = input()
+s = dict()
+for x in a:
+  s[x] = s.get(x, 0) + 1
+for x in b:
+  s[x] = s.get(x, 0) - 1
+for key, val in s.items():
+  if val != 0:
+    print("NO")
+    break
+else:
+  print("YES")
