@@ -23,3 +23,25 @@ for x in s:
       stack.append(c)
 
 print(stack.pop())
+
+#new mycode
+import sys
+#sys.stdin = open("input.txt", "rt")
+data = input()
+d = []
+for x in data:
+  if x.isdecimal():
+    d.append(int(x))
+  else:
+    b = d.pop()
+    a = d.pop()
+    if x == '+':
+      d.append(a + b)
+    elif x == '-':
+      d.append(a - b)
+    elif x == '*':
+      d.append(a * b)
+    elif x == '/':
+      d.append(a / b)
+
+print(d.pop())
