@@ -10,3 +10,21 @@ while dq:
     dq.popleft()
     if len(dq) == 1:
         print(dq.pop())
+
+#new mycode
+import sys
+from collections import deque
+#sys.stdin = open("input.txt", "rt")
+n, m = map(int, input().split())
+data = [i for i in range(1, n+1)]
+data = deque(data)
+c = m
+while data:
+  if len(data) == 1:
+    print(data.pop())
+  elif c == 1:
+    data.popleft()
+    c = m
+  else:
+    data.append(data.popleft())
+    c -= 1
