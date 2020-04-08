@@ -14,3 +14,20 @@ if m != 0:
 num = ''.join(map(str, stack))
 
 print(num)
+
+#new mycode
+import sys
+#sys.stdin = open("input.txt", "rt")
+n, m = input().split()
+m = int(m)
+d = []
+for x in n:
+  while d and d[-1] < int(x) and m > 0:
+    d.pop()
+    m -= 1
+  d.append(int(x))
+if m != 0:
+  d = d[:-m]
+for x in d:
+  print(x, end='')
+  
