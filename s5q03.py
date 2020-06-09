@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
 #new code
 import sys
-sys.stdin = open("input.txt", "rt")
+#sys.stdin = open("input.txt", "rt")
 
 
 def DFS(n):
