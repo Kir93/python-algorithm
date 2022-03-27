@@ -2,14 +2,12 @@
 
 파이썬을 사용한 알고리즘 풀이 모음
 
-## 문제집
-
-### Flag
+## Flag
 
 - [ ] : success but one more
 - [x] : success
 
-### Baekjoon
+### 문제집 (BAEKJOON)
 
 - 입출력 (inputOutput)
 
