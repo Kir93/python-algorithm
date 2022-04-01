@@ -2,7 +2,7 @@
 
 파이썬을 사용한 알고리즘 풀이 모음
 
-## Flag
+## Icon Meaning
 
 - [ ] : success but one more
 - [x] : success
