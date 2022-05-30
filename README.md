@@ -1,6 +1,6 @@
 ## Explanation
 
-파이썬을 사용한 알고리즘 풀이
+Python 알고리즘 풀이
 
 ## Icon 뜻
 
