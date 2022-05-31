@@ -2,14 +2,14 @@
 
 Python 알고리즘 풀이
 
-## Icon 뜻
+## Meaning Icon
 
-### 문제집 아이콘
+### Workbook Icon
 
 :white_large_square: : 문제집 푸는 중
 :white_check_mark: : 문제집 풀이 완료
 
-### 문제 아이콘
+### Problem Icon
 
 - [ ] : success but one more
 - [x] : success
