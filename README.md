@@ -4,7 +4,12 @@
 
 ## 문제집
 
+### Flag
+
+- [ ] : success but one more
+- [x] : success
+
 ### Baekjoon
 
-- 단기간 성장
-  - [ ] 12865 평범한 배낭
+- 단기간 성장 (shortTermGrowth)
+  - [-] 12865 평범한 배낭
