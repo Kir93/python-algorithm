@@ -14,7 +14,7 @@
 - [ ] : success but one more
 - [x] : success
 
-## Workbook (BAEKJOON)
+## BAEKJOON
 
 ### 입출력 ([inputOutput](https://www.acmicpc.net/workbook/view/7213])) :white_check_mark:
 
