@@ -42,6 +42,10 @@
 - [ ] 2011
 - [ ] 11052
 
+### 이런저런 문들([others](https://www.acmicpc.net/workbook/view/7215)) :white_large_square:
+
+- [ ] 2751
+
 ### 단기간 성장 ([shortTermGrowth](https://www.acmicpc.net/workbook/view/4349)) :white_large_square:
 
 - [ ] 12865 평범한 배낭
