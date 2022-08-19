@@ -62,6 +62,7 @@
 - [x] 2743
 - [x] 11655
 - [x] 10824
+- [x] 11656
 
 ### 단기간 성장 ([shortTermGrowth](https://www.acmicpc.net/workbook/view/4349)) :white_large_square:
 
