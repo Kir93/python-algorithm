@@ -44,7 +44,7 @@
 
 ### 이런저런 문들([others](https://www.acmicpc.net/workbook/view/7215)) :white_large_square:
 
-- [ ] 2751
+- [x] 2751
 - [ ] 11650
 - [ ] 11651
 - [ ] 10814
