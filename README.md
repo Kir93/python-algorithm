@@ -2,14 +2,14 @@
 
 파이썬을 사용한 알고리즘 풀이 모음
 
-## Icon 의미
+## Icon 뜻
 
-### 문제집
+### 문제집 아이콘
 
 :white_large_square: : 문제집 풀이 중
 :white_check_mark: : 문제집 전체 완료
 
-### 문제
+### 문제 아이콘
 
 - [ ] : success but one more
 - [x] : success
