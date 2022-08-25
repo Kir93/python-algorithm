@@ -1,3 +1,5 @@
+# 유클리드 호제법으로 다시 풀기
+
 x, y = map(int, input().split())
 big = 0
 small = max(x,y)
