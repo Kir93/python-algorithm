@@ -41,7 +41,6 @@
 - [x] 2225
 - [ ] 2011 - re!
 - [ ] 11052 - re!
-- [ ] 2609 - re
 
 ### 이런저런 문들([others](https://www.acmicpc.net/workbook/view/7215)) :white_large_square:
 
@@ -68,6 +67,7 @@
 - [ ] 1158
 - [ ] 1168
 - [x] 10430
+- [ ] 2609
 
 ### 단기간 성장 ([shortTermGrowth](https://www.acmicpc.net/workbook/view/4349)) :white_large_square:
 
