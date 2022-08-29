@@ -1,1 +1,0 @@
-# insert, pop 주의
