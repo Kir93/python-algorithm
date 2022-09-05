@@ -9,9 +9,8 @@ while True:
     if n == 0: exit()
     else:
         for i in range(n-1, 2, -1):
-            x = y = 0
             if isPrime(i):
-                x = i
-                if isPrime(n-x):
-                    print(f'{n} = {n-x} + {x}')
+                a = n - i
+                if isPrime(a):
+                    print(f'{n} = {a} + {i}')
                     break
