@@ -85,6 +85,10 @@
 - [x] 1676
 - [ ] 2004
 
+### 그래프 ([graph](https://www.acmicpc.net/workbook/view/7216)) :white_large_square:
+
+- [ ] 1260
+
 ### 단기간 성장 ([shortTermGrowth](https://www.acmicpc.net/workbook/view/4349)) :white_large_square:
 
 - [ ] 12865 평범한 배낭
