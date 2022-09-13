@@ -91,6 +91,10 @@
 - [ ] 11724
 - [ ] 1707
 
-### 단기간 성장 ([shortTermGrowth](https://www.acmicpc.net/workbook/view/4349)) :white_large_square:
+### 이분탐색/삼분탐색 ([binarySearch](https://www.acmicpc.net/workbook/view/7217)) :white_large_square:
 
-- [ ] 12865 평범한 배낭
+### 분할정복 ([divideAndConquer](https://www.acmicpc.net/workbook/view/7218)) :white_large_square:
+
+### 그리디 ([greedy](https://www.acmicpc.net/workbook/view/7219)) :white_large_square:
+
+### 완전탐색 ([exhaustiveSearch](https://www.acmicpc.net/workbook/view/7220)) :white_large_square:
