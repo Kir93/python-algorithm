@@ -95,6 +95,8 @@
 
 ### 분할정복 ([divideAndConquer](https://www.acmicpc.net/workbook/view/7218)) :white_large_square:
 
+- [x] 11728
+
 ### 그리디 ([greedy](https://www.acmicpc.net/workbook/view/7219)) :white_large_square:
 
 ### 완전탐색 ([exhaustiveSearch](https://www.acmicpc.net/workbook/view/7220)) :white_large_square:
