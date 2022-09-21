@@ -1,13 +1,13 @@
 ## Explanation
 
-파이썬을 사용한 알고리즘 풀이 모음
+파이썬을 사용한 알고리즘 풀이
 
 ## Icon 뜻
 
 ### 문제집 아이콘
 
-:white_large_square: : 문제집 풀이 중
-:white_check_mark: : 문제집 전체 완료
+:white_large_square: : 문제집 푸는 중
+:white_check_mark: : 문제집 마스터
 
 ### 문제 아이콘
 
