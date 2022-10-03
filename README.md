@@ -83,7 +83,7 @@
 - [x] 11653
 - [x] 10872
 - [x] 1676
-- [ ] 2004 - re
+- [ ] 2004 - re!
 
 ### 그래프 ([graph](https://www.acmicpc.net/workbook/view/7216)) :white_large_square:
 
