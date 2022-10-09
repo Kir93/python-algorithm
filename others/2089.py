@@ -3,3 +3,14 @@
 # 어렵게 고민할 필요 없음
 # 문자열
 # 0을 생각해야 됨
+n = int(input())
+r = ''
+if n == 0: exit(print(0))
+while n != 0:
+    if n%-2 == 0:
+        r += '0'
+        n //= -2
+    else:
+        r += '1'
+        n = n//-2 + 1
+print(r[::-1])
