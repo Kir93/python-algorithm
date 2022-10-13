@@ -1,9 +1,7 @@
-w = [int(input()) for _ in range(int(input()))]
-dp = [0] * len(w)
-if(len(w)==1):
-    print(w[0])
-    exit()
-dp[0], dp[1] = w[0], w[0]+w[1]
-for i in range(2, len(w)):
-    dp[i] = max(w[i] + dp[i-2], w[i] + w[i-1] + dp[i-3], dp[i-1])
-print(max(dp))
+ls = [int(input()) for _ in range(int(input()))]
+dp = [0] * len(ls)
+if len(ls) == 1: exit(print(ls[0]))
+dp[0], dp[1] = ls[0], ls[0] + ls[1]
+for i in range(2, len(ls)):
+    dp[i] = max(dp[i-3]+ls[i-1]+ls[i], dp[i-1], dp[i-2]+ls[i])
+print(dp[-1])
