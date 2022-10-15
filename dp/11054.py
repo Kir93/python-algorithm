@@ -1,13 +1,2 @@
-int(input())
-ls = list(map(int, input().split()))
-rls = list(reversed(ls))
-dp = [1] * len(ls)
-rdp = [1] * len(ls)
-for i in range(1, len(ls)):
-    for j in range(i):
-        if ls[i] > ls[j]: dp[i] = max(dp[i], dp[j]+1)
-        if rls[i] > rls[j]: rdp[i] = max(rdp[i], rdp[j]+1)
-rdp = rdp[::-1]
-for i in range(len(ls)):
-    dp[i] += rdp[i] - 1
-print(max(dp))
+# 증가하는 수열 2번으로 하고 중복되는 1번을 제거하는 것으로 생각하면 된다.
+# 감소 = 뒤집어서 증가를 구한 뒤 다시 뒤집으면 감소
