@@ -3,12 +3,5 @@
 # 한 자리 씩 참고하자
 # 결과 나누기 필수
 # 첫글자 0, 중간 0에 대해 생각하자
-ls = [0] + list(map(int, input()))
-if ls[1] == 0: exit(print(0))
-dp = [0] * len(ls)
-dp[0] = dp[1] = 1
-for i in range(2, len(ls)):
-    if ls[i] != 0: dp[i] += dp[i-1]
-    temp = ls[i-1] * 10 + ls[i]
-    if temp >= 10 and temp <= 26: dp[i] += dp[i-2]
-print(dp[-1]%1000000)
+# 배열의 맨 앞 0 추가, dp[0] = dp[1] = 1
+# 실제 갯수를 세어보면 바로 나온다.
