@@ -40,7 +40,7 @@
 - [x] 9461
 - [x] 2225
 - [ ] 2011
-- [x] 11052 - next
+- [ ] 11052
 
 ### 이런저런 문들([others](https://www.acmicpc.net/workbook/view/7215)) :white_large_square:
 
