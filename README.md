@@ -1,13 +1,13 @@
 ## Explanation
 
-Python 알고리즘 풀이
+Python Algorithm Solving
 
 ## Meaning Icon
 
 ### Workbook Icon
 
-:white_large_square: : 문제집 푸는 중
-:white_check_mark: : 문제집 풀이 완료
+:white_large_square: : Workbook solving...
+:white_check_mark: : Workbook solve!
 
 ### Problem Icon
 
