@@ -1,6 +1,6 @@
 ## Explanation
 
-Python Algorithm Solving
+Python Algorithm Problem Solving Repository
 
 ## Meaning Icon
 
