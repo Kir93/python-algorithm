@@ -7,7 +7,7 @@ Python Algorithm Problem Solving Repository
 ### Workbook Icon
 
 :white_large_square: : Workbook solving...
-:white_check_mark: : Workbook solve!
+:white_check_mark: : Workbook solved!
 
 ### Problem Icon
 
