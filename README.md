@@ -6,12 +6,12 @@ Python Algorithm Problem Solving Repository
 
 ### Workbook Icon
 
-:white_large_square: : Workbook solving...
-:white_check_mark: : Workbook solved!
+:white_large_square: - Workbook solving...
+:white_check_mark: - Workbook solved!
 
 ### Problem Icon
 
-- [ ] : success but one more
+- [ ] : success but not perfected
 - [x] : success
 
 ## BAEKJOON
