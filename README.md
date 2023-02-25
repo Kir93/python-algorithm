@@ -18,7 +18,7 @@ Python Algorithm Problem Solving Repository
 
 ### 입출력 ([inputOutput](https://www.acmicpc.net/workbook/view/7213])) :white_check_mark:
 
-### 동적 계획법([DP](https://www.acmicpc.net/workbook/view/7214)) :white_large_square:
+### 동적 계획법([dp](https://www.acmicpc.net/workbook/view/7214)) :white_large_square:
 
 - [x] 1463
 - [x] 11726
