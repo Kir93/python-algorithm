@@ -1,0 +1,6 @@
+map(int, input().split())
+a = set(map(int, input().split()))
+b = set(map(int, input().split()))
+r = sorted(a - b)
+print(len(r))
+print(*r)
