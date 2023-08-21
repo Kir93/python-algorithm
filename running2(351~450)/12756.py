@@ -1,0 +1,6 @@
+aa, al = map(int, input().split())
+ba, bl = map(int, input().split())
+a, b = al//ba + (1 if al%ba else 0), bl // aa + (1 if bl%aa else 0)
+if a > b: print('PLAYER A')
+elif b > a: print('PLAYER B')
+else: print('DRAW')
