@@ -1,5 +1,10 @@
+import sys
 import heapq
+
+input = sys.stdin.readline
+
 max_h, min_h = [], []
+
 for _ in range(int(input())):
     num = int(input())
     if len(max_h) == len(min_h): heapq.heappush(max_h, -num)
