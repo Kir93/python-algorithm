@@ -1,41 +1,42 @@
-from sys import stdin
-input = stdin.readline
 from collections import deque
 
-dr = (-1, 1, 0, 0)
-dc = (0, 0, -1, 1)
 
-def bfs():
-    check = [[float('inf')] * W for _ in range(H)]
-    check[sr][sc] = -1
-    Q = deque([(sr, sc)])
-    while Q:
-        r, c = Q.popleft()
-        if (r, c) == (gr, gc):
-            return check[gr][gc]
-
+def bfs(x, y):
+    queue = deque([(x, y)])
+    visited[x][y] = 0
+    while queue:
+        x, y = queue.popleft()
         for i in range(4):
-            nr = r + dr[i]
-            nc = c + dc[i]
+            nx, ny = x + dx[i], y + dy[i]
             while True:
-                if not (0 <= nr < H and 0 <= nc < W):
+                if not (0 <= nx < n and 0 <= ny < m):
                     break
-                if A[nr][nc] == "*":                 
+                if board[nx][ny] == "*":
                     break
-                if check[nr][nc] < check[r][c] + 1:  
+                if visited[nx][ny] < visited[x][y] + 1:
                     break
-                Q.append((nr, nc))                   
-                check[nr][nc] = check[r][c] + 1
-                nr += dr[i]
-                nc += dc[i]
+                queue.append((nx, ny))
+                visited[nx][ny] = visited[x][y] + 1
+                nx = nx + dx[i]
+                ny = ny + dy[i]
+            print(visited)
 
-W, H = map(int, input().split())
-A, C = [], []
-sr, sc, gr, gc = 0, 0, 0, 0
-for i in range(H):
-    A.append(list(input().strip()))
-    for j in range(W):
-        if A[i][j] == "C":
-            C.append((i, j))
-(sr, sc), (gr, gc) = C
-print(bfs())
+
+if __name__ == "__main__":
+    m, n = map(int, input().split())
+    board = [input() for _ in range(n)]
+
+    dx = (0, 1, 0, -1)
+    dy = (1, 0, -1, 0)
+
+    C = []
+    for i in range(n):
+        for j in range(m):
+            if board[i][j] == "C":
+                C.append((i, j))
+    (sx, sy), (ex, ey) = C
+
+    visited = [[float("inf")] * m for _ in range(n)]
+    bfs(sx, sy)
+
+    print(visited[ex][ey] - 1)
