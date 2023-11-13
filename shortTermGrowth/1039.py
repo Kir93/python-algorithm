@@ -1,34 +1,31 @@
 from collections import deque
+N, K = map(int, input().split())
+M = len(str(N))
 
-n,k = input().strip().split()
-size = len(n)
-n,k = map(int, [n,k])
 
-def solv():
-    answer = 0
+def bfs(N, K):
     visited = set()
-
-    q = deque([(n,0)])
+    visited.add((N, 0))
+    q = deque()
+    q.append((N, 0))
+    answer = 0
     while q:
-        now,cnt = q.pop()
-        if cnt == k:
-            answer = max(answer, now)
+        n, k = q.popleft()
+        if k == K:
+            answer = max(answer, n)
             continue
+        n = list(str(n))
+        for i in range(M-1):
+            for j in range(i+1, M):
+                if i == 0 and n[j] == '0':
+                    continue
+                n[i], n[j] = n[j], n[i]
+                nn = int(''.join(n))
+                if (nn, k+1) not in visited:
+                    q.append((nn, k+1))
+                    visited.add((nn, k+1))
+                n[i], n[j] = n[j], n[i]
+    return answer if answer else -1
 
-        arr = list(map(int, str(now)))
-        for i in range(size-1):
-            for j in range(i+1,size):
-                if i == 0 and arr[j] == 0: continue
-                arr[i],arr[j] = arr[j],arr[i]
-                num = list_to_int(arr)
-                if num+cnt+1 not in visited:
-                    q.appendleft((num,cnt+1))
-                    visited.add(num+cnt+1)
-                arr[i],arr[j] = arr[j],arr[i]
-    print(answer if answer > 0 else -1)
-def list_to_int(arr):
-    result = 0
-    for num in arr:
-        result = result*10+num
-    return result
-solv()
+
+print(bfs(N, K))
