@@ -1,30 +1,18 @@
-import sys
-input = sys.stdin.readline
+N, M = map(int, input().split())
 
-n, m = map(int, input().rsplit())
-memories = list(map(int, input().rsplit()))
-cost = list(map(int, input().rsplit()))
+memory = list(map(int, input().split()))
+c = list(map(int, input().split()))
 
-tc = sum(cost)
-result = sys.maxsize
+dp = [[0 for _ in range(sum(c)+1)] for _ in range(N+1)]
 
-dp = [[0 for _ in range(tc+1)] for _ in range(n+1)]
+for i in range(1, N+1):
+    for j in range(0, sum(c)+1):        
+        if j >= c[i-1]:            
+            dp[i][j] = max(dp[i-1][j], dp[i-1][j-c[i-1]]+memory[i-1])        
+        else:        
+            dp[i][j] = dp[i-1][j] 
 
-for i in range(n):
-    for j in range(tc):
-        if cost[i] > j:
-            dp[i][j] = dp[i-1][j]
-        else:
-            dp[i][j] = max(dp[i-1][j], memories[i] + dp[i-1][j-cost[i]])
-
-        if dp[i][j] >= m:
-            result = min(result, j)
-
-if m==0:
-    print(0)
-elif n==1:
-    print(cost[0])
-elif result == sys.maxsize:
-    print(n*m)
-else:
-    print(result)
+for i, mem in enumerate(dp[N]):    
+    if mem >= M:   
+        print(i)        
+        break
