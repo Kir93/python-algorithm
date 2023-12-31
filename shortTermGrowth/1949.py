@@ -1,25 +1,29 @@
-import sys, collections
-sys.setrecursionlimit(10**6)
+import sys
+sys.setrecursionlimit(10**4+1)
+input = sys.stdin.readline
 
-def dfs(cur):
-    visited[cur] = 1
-    for u in g[cur]:
-        if not visited[u]:
-            dfs(u)
-            dp[cur][1] += dp[u][0] # 현재 마을을 우수마을로 선정
-            dp[cur][0] += max(dp[u][0], dp[u][1]) # 현재 마을을 우수마을로 선정 X
+N = int(input())
+w = [0] + list(map(int, input().split()))
 
-n = int(sys.stdin.readline().strip())
-cost = [0] + [int(x) for x in sys.stdin.readline().split()]
+tree = [[] for _ in range(N+1)]
+for _ in range(N-1):
+    u, v = map(int, input().split())
+    tree[u].append(v)
+    tree[v].append(u)
 
-visited = [0 for _ in range(n+1)]
-dp = [[0, cost[i]]*2 for i in range(n+1)] # dp[i][0] = i마을을 선정X, dp[i][1] = i마을을 선정O
-g = collections.defaultdict(list)
+visited = [False] * (N+1)
+dp = [[w[i], 0] for i in range(N+1)]
 
-for _ in range(n-1):
-    v, u = map(int, sys.stdin.readline().split())
-    g[v].append(u)
-    g[u].append(v)
+def dfs(n):
+    visited[n] = True
+
+    for nn in tree[n]:
+        if visited[nn]:
+            continue
+
+        dfs(nn)
+        dp[n][0] += dp[nn][1]
+        dp[n][1] += max(dp[nn][0], dp[nn][1])
 
 dfs(1)
-print(max(dp[1][1], dp[1][0]))
+print(max(dp[1][0], dp[1][1]))
