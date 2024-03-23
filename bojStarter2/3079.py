@@ -1,9 +1,9 @@
 from sys import stdin
 
 n, m = map(int, stdin.readline().split())
-arr = [int(stdin.readline()) for _ in range(n)]
+ls = [int(stdin.readline()) for _ in range(n)]
 
-l, r = min(arr), max(arr) * m
+l, r = min(ls), max(ls) * m
 ans = r
 
 while l <= r:
@@ -11,7 +11,7 @@ while l <= r:
     mid = (l + r) // 2
 
     for i in range(n):
-        total += mid // arr[i]
+        total += mid // ls[i]
 
     if total >= m:
         r = mid -1
