@@ -11,7 +11,6 @@ for _ in range(e):
     a, b, cost = map(int, input().split())
     graph[a].append((b, cost))
 
-
 def dijkstra(start):
     q = []
     distance = [INF] * (v + 1)
@@ -34,8 +33,8 @@ def dijkstra(start):
 
     return distance
 
-
 result = 0
+
 for i in range(1, v + 1):
     go = dijkstra(i)
     back = dijkstra(x)
