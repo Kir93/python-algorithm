@@ -1,3 +1,1 @@
-from random import *
- 
-print(randint(0, 1))
+print(1)
