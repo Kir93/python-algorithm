@@ -1,9 +1,12 @@
-import sys;
-input = sys.stdin.readline
-
 n, m = map(int, input().split())
 
-if n == 1: print(1)
-elif n == 2: print(4, (m+1)//2)
-elif m <= 6: print(min(4, m))
-else: print(m-2)
+result = 0
+if n == 1: result = 1
+elif n == 2: 
+  if m >= 1 and m <= 6: result = (m + 1) // 2 
+  elif m >= 7: result = 4
+elif n >= 3: 
+  if m <= 6: result = min(m, 4)
+  elif m >= 7: result = m - 2
+  
+print(result)
