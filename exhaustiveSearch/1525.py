@@ -1,6 +1,7 @@
 from collections import deque
 
 puzzle = ""
+
 for i in range(3):
     puzzle += "".join(list(input().split()))
 
@@ -9,6 +10,7 @@ q = deque([puzzle])
 
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
+
 def bfs():
     while q:
         puzzle = q.popleft()
