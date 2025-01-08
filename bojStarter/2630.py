@@ -1,7 +1,8 @@
 import sys
+input = sys.stdin.readline
 
-N = int(sys.stdin.readline())
-paper = [list(map(int, sys.stdin.readline().split())) for _ in range(N)] 
+N = int(input())
+paper = [list(map(int, input().split())) for _ in range(N)] 
 
 result = []
 
@@ -15,10 +16,8 @@ def solution(x, y, N) :
         solution(x+N//2, y, N//2)
         solution(x+N//2, y+N//2, N//2)
         return
-  if color == 0 :
-    result.append(0)
-  else :
-    result.append(1)
+  if color == 0 : result.append(0)
+  else : result.append(1)
 
 
 solution(0,0,N)
