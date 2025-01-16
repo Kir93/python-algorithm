@@ -17,5 +17,3 @@ def solution(my_string, indices):
     for idx in indices:
         my_string = my_string[:idx] + 'X' + my_string[idx+1:]
     return my_string.replace('X', '')
-
-print(solution("apporoograpemmemprs",[1, 16, 6, 15, 0, 10, 11, 3]))
