@@ -1,4 +1,4 @@
-# 주사위 게임 3 - 다시 풀기
+# 주사위 게임 3
 def solution(a, b, c, d):
     nums = [a, b, c, d]
     counts = [nums.count(i) for i in nums]

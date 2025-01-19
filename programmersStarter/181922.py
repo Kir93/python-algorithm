@@ -1,4 +1,4 @@
-# 수열과 구간 쿼리 4 - 다시 풀기
+# 수열과 구간 쿼리 4
 def solution(arr, queries):
     for s, e, k in queries:
         for i in range(s, e+1):
