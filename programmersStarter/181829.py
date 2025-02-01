@@ -1,4 +1,4 @@
-# 이차원 배열 대각선 순회하기 - retry
+# 이차원 배열 대각선 순회하기
 def solution(board, k):
     answer = 0
     for i in range(min(k+1, len(board))):
