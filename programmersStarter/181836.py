@@ -1,4 +1,4 @@
-# 그림 확대 - retry
+# 그림 확대
 def solution(picture, k):
     answer = []
     for i in picture:
@@ -16,4 +16,11 @@ def solution(picture, k):
     answer = []
     for i in range(len(picture)):
         answer += [picture[i].replace('.', '.' * k).replace('x', 'x' * k)] * k
+    return answer
+
+# retry
+def solution(picture, k):
+    answer = []
+    for i in range(len(picture)):
+        answer += [picture[i].replace('.', '.'*k).replace('x', 'x'*k)] * k
     return answer
