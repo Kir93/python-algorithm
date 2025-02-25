@@ -1,27 +1,26 @@
-L = []
-N, M = map(int, input().split())
-for _ in range(N):
-    s, e  =map(int, input().split())
-    if s>e : 
-        L.append([e,s])
+import sys
+input = sys.stdin.readline
 
-L.sort(key = lambda x: -x[1])
-tmp = []
-ts, te = L[0]
-for i in range(1,len(L)):
-    s,e = L[i]
-    
-    if ts <= e : # <=te (sort에 의해 보장됨)
-        ts = min(ts,s)
-    
-    else:   #e < ts 
-        tmp.append([ts,te])
-        ts, te = s,e
+N,M = map(int,input().split())
 
-tmp.append([ts,te])
+taxi = []
+for i in range(N):
+  x,y = map(int,input().split())
+  if y>x:
+    continue
+  taxi.append((M-x,M-y))
+taxi.sort()
+t = len(taxi)
 
-answer = M
-for i in range(len(tmp)):
-    answer += 2*(tmp[i][1] - tmp[i][0])
-    
-print(answer)
+SUM = 0
+x = 0
+while x < t:
+  start,end = taxi[x]
+  next = x
+  while next+1<t and taxi[next+1][0]<end:
+    next += 1
+    end = max(taxi[next][1],end)
+  SUM += end-start
+  x = next+1
+
+print(M+SUM*2)
