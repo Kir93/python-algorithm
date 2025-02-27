@@ -6,7 +6,7 @@ def update(i):
     fen[i] += 1
     i += i&-i
 
-def sumfen(i):
+def sumFen(i):
   SUM = 0
   while i:
     SUM += fen[i]
@@ -22,7 +22,7 @@ for _ in range(N):
 result = 0; fen = [0]*(M+1)
 for y in range(M):
   for x in co[y]:
-    result += sumfen(x-1)*(sumfen(M)-sumfen(x))
+    result += sumFen(x-1)*(sumFen(M)-sumFen(x))
     result %= 10**9+7
   for x in co[y]:
     update(x)
