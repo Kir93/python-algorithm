@@ -1,4 +1,4 @@
-# 삼각형의 완성조건 (2) - retry
+# 삼각형의 완성조건 (2)
 def solution(sides):
     answer = 0
     maxSide = max(sides)
@@ -21,3 +21,23 @@ def solution(sides):
 # Best Solution 2
 def solution(sides):
     return 2 * min(sides) - 1
+
+# retry
+def solution(sides):
+    return 2 * min(sides) - 1
+
+# retry 2
+def solution(sides):
+    answer = 0
+    maxSides = max(sides)
+    minSides = min(sides)
+    
+    # maxSides가 가장 큰 변
+    for _ in range(maxSides - minSides, maxSides):
+        answer += 1
+        
+    # newSides가 가장 큰 변
+    for _ in range(maxSides + 1, maxSides+minSides):
+        answer += 1
+        
+    return answer
