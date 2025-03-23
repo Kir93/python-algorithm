@@ -1,4 +1,4 @@
-# 연속된 수의 합 - retry
+# 연속된 수의 합
 def solution(num, total):
     start = (total - (num * (num - 1) // 2)) // num
     return [start + i for i in range(num)]
@@ -10,3 +10,8 @@ def solution(num, total):
 # 따라서 n부터 num까지의 합은 num * n + ((num - 1) * num // 2) = total로 표현할 수 있다.
 # n을 구하기 위해서는 num * n = total - ((num - 1) * num // 2)
 # n = (total - ((num - 1) * num // 2)) // num
+
+# retry
+def solution(num, total):
+    start = (total - ((num-1) * num // 2)) // num    
+    return [start + i for i in range(num)]
