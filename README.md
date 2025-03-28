@@ -1,4 +1,4 @@
-## Explanation
+# Explanation
 
 Python Algorithm Problem Solving Repository
 
