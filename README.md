@@ -1,18 +1,18 @@
-## Explanation
+# Explanation
 
-Python Algorithm Problem Solving Repository
+파이썬 알고리즘 문제 풀이
 
 ## Meaning Icon
 
 ### Workbook Icon
 
-:white_large_square: - Workbook solving...
-:white_check_mark: - Workbook solved!
+:white_large_square: - 문제집 푸는 중
+:white_check_mark: - 모든 문제 성공
 
 ### Problem Icon
 
-- [ ] : success but not perfected
-- [x] : success
+- [ ] : 문제는 풀었지만, 재풀이 필요
+- [x] : 문제 풀이 성공
 
 ## BAEKJOON
 
