@@ -1,16 +1,9 @@
-def divisor(n):
-    c = 0
-    for i in range(1, int(n**(1/2)) + 1):
-        if i*i == n:
-            c += 1
-            continue
-        if n%i == 0:
-            c += 2   
-    return c
+import math
 
+# 제곱수는 약수의 개수가 홀수
 def solution(left, right):
     answer = 0
     for i in range(left, right + 1):
-        if divisor(i)%2 == 0: answer += i
-        else: answer -= i 
+        if int(math.sqrt(i)) == math.sqrt(i): answer -= i
+        else: answer += i
     return answer
