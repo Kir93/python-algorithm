@@ -1,9 +1,11 @@
 def divisor(n):
     c = 0
     for i in range(1, int(n**(1/2)) + 1):
-        if n%i == 0:
+        if i*i == n:
             c += 1
-            if i ** 2 != n: c += 1
+            continue
+        if n%i == 0:
+            c += 2   
     return c
 
 def solution(left, right):
