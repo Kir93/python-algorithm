@@ -1,10 +1,4 @@
-def gcd(n, m):
-    while m > 0:
-        n, m = m, n%m
-    return n
+import math
 
-def lcm(n, m):
-    return n * m // gcd(n, m)
-    
 def solution(n, m):
-    return [gcd(n, m), lcm(n, m)]
+    return [math.gcd(n, m), (n*m) // math.gcd(n, m)]
