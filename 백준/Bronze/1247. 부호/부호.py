@@ -2,12 +2,9 @@ from sys import stdin
 input = stdin.readline
 
 for _ in range(3):
-    ls = [int(input()) for _ in range(int(input()))]
-    sum_ls = sum(ls)
-
-    if sum_ls == 0: 
-        print("0")
-    elif sum_ls > 0:
-        print("+")
-    else:
-        print("-")
+    s = 0
+    for _ in range(int(input())):
+        s += int(input())
+    
+    if s: print('+' if s > 0 else '-')
+    else: print(s)
