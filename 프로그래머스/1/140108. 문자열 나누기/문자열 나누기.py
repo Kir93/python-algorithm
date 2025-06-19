@@ -4,7 +4,7 @@ def solution(s):
     x_count = 0
     diff_count = 0
     
-    for i, x in enumerate(s):
+    for x in s:
         if x_count == 0:
             prev = x
             answer += 1
