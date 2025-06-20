@@ -1,6 +1,4 @@
 def solution(food):
-    p = ''
-    for i in range(len(food)):
-        if food[i] > 1:
-            p += str(i) * (food[i]//2)
-    return p + '0' + p[::-1]
+    left = [str(i) * (food[i]//2) for i in range(1, len(food))]
+    left_part = ''.join(left)
+    return left_part + '0' + left_part[::-1]
