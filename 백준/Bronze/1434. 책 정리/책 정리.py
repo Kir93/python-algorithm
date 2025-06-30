@@ -1,17 +1,14 @@
+i, j = 0, 0
+
 n, m = map(int, input().split())
-a = list(map(int, input().split()))
-b = list(map(int, input().split()))
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
 
-i = 0
-j = 0
-
-while True:
-    if a[i] >= b[j]:
-        a[i] -= b[j]
-        j += 1
-    elif a[i] < b[j]:
+while i < n and j < m:
+    if A[i] < B[j]:
         i += 1
-    if i == n or j == m:
-        break
+    else:
+        A[i] -= B[j]
+        j += 1
 
-print(sum(a))
+print(sum(A))
