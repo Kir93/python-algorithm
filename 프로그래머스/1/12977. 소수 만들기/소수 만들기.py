@@ -16,5 +16,5 @@ def solution(nums):
     for comb in combinations(nums, 3):
         if is_prime(sum(comb)):
             answer += 1
-        
+
     return answer
