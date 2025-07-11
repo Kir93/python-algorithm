@@ -1,15 +1,17 @@
+import heapq
+
 def solution(k, score):
     answer = []
-    honer_list = []
+    hall = []
+    
     for s in score:
-        if len(honer_list) == k:
-            min_score = min(honer_list)
-            if s > min_score:
-                honer_list.remove(min_score)
-                honer_list.append(s)
+        if len(hall) < k:
+            heapq.heappush(hall, s)
         else:
-            honer_list.append(s)
-            
-        answer.append(min(honer_list))
-            
+            if s > hall[0]:
+                heapq.heappop(hall)
+                heapq.heappush(hall, s)
+                
+        answer.append(hall[0])
+        
     return answer
