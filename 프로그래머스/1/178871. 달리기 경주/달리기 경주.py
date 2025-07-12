@@ -1,9 +1,13 @@
 def solution(players, callings):
-    rank = {player: idx for idx, player in enumerate(players)}
-    for call in callings:
-        idx = rank[call]
-        if idx > 0:
-            players[idx], players[idx - 1] = players[idx - 1], players[idx]
-            rank[players[idx]] = idx
-            rank[players[idx - 1]] = idx - 1
+    player_number = {player: i for i, player in enumerate(players)}
+    
+    for player in callings:
+        i = player_number[player]
+        if i == 0:
+            continue
+
+        front = players[i - 1]
+        players[i], players[i - 1] = front, player
+        player_number[player], player_number[front] = i - 1, i
+
     return players
