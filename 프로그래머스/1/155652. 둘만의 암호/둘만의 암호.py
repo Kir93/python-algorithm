@@ -1,15 +1,12 @@
 def solution(s, skip, index):
-    answer = []
-    for x in s:
-        ax = ord(x)
-        i = index
-        while i > 0:
-            check_num = ax - 25 if ax + 1 > 122 else ax + 1
-            if chr(check_num) not in skip:
-                i -= 1
-                
-            ax = check_num
+    used = [chr(i) for i in range(97, 123) if chr(i) not in skip]
+    mapping = {}
+    
+    for x in map(chr, range(97, 123)):
+        if x in skip:
+            continue
         
-        answer.append(chr(ax))
+        i = used.index(x)
+        mapping[x] = used[(i + index) % len(used)]
         
-    return ''.join(answer)
+    return ''.join(mapping[x] for x in s)
