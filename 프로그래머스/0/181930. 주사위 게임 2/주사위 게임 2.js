@@ -1,5 +1,5 @@
 function sum(a, b, c){
-    return [a,b,c].reduce((acc, prev) => acc += prev)
+    return [a,b,c].reduce((acc, cur) => acc += cur)
 }
 
 function solution(a, b, c) {
